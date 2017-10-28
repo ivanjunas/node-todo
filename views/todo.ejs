@@ -1,0 +1,22 @@
+
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-1.12.3.js"></script>
+		<script src="/assets/todo-list.js"></script>
+		<link rel="stylesheet" type="text/css" href="/assets/styles.css">
+	</head>
+	<body>
+		<h1>My Todo List</h1>
+		<div id="todo-table">
+			<form>
+				<input type="text" name="item" placeholder="Add new item..." required="true">
+				<button type="submit">Add Item</button>
+			</form>
+		</div>
+		<ul>
+			<% for(var i=0; i<todos.length; i++) { %>
+				<li><%= todos[i].item %></li>
+			<% } %>	
+		</ul>
+	</body>
+</html>
