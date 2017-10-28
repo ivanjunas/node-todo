@@ -12,13 +12,6 @@ var todoSchema = new mongoose.Schema({
 var Todo = mongoose.model('Todo', todoSchema);
 
 
-// local storage of data 
-// var data = [
-// 	{item: 'get milk'},
-// 	{item: 'walk dog'},
-// 	{item: 'make some code'} 
-// ];
-
 var urlEndcodedParser = bodyParser.urlencoded({extended: false});
             
 module.exports = function(app) {
@@ -51,10 +44,5 @@ module.exports = function(app) {
 			if (err) throw err;
 			res.json(data);
 		});
-
-		// data = data.filter(function(todo) {
-		// 	return todo.item.replace(/ /g, '-') !== req.params.item;
-		// })
-		//res.json(data);
 	});
 };
